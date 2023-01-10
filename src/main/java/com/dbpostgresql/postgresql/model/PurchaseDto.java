@@ -1,14 +1,12 @@
 package com.dbpostgresql.postgresql.model;
 
 import jakarta.persistence.*;
-
-import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.List;
 
 @Entity
-@Table(name = "users")
-public class UserDto implements Serializable {
+@Table(name = "purchases")
+public class PurchaseDto {
 
     private static final long serialVersionUID = 1L;
 
@@ -22,12 +20,8 @@ public class UserDto implements Serializable {
     private LocalDate birthDate;
     private String email;
 
-    @OneToMany(mappedBy = "userDto")
-    List<PurchaseDto> purchaseDtos;
-
-    public UserDto(){
-
-    }
+    @ManyToOne
+    private UserDto userDto;
 
 
 }
