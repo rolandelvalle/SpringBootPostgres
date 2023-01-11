@@ -26,8 +26,51 @@ public class UserDto implements Serializable {
     List<PurchaseDto> purchaseDtos;
 
     public UserDto(){
-
     }
 
+    public UserDto(String fullName, LocalDate birthDate, String email) {
+        this.fullName = fullName;
+        this.birthDate = birthDate;
+        this.email = email;
+    }
 
+    public Long getIdUser() {
+        return idUser;
+    }
+
+    public void setIdUser(Long idUser) {
+        this.idUser = idUser;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public LocalDate getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(LocalDate birthDate) {
+        this.birthDate = birthDate;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public List<PurchaseDto> getPurchaseDtos() {
+        return purchaseDtos;
+    }
+
+    public void setPurchaseDtos(List<PurchaseDto> purchaseDtos) {
+        this.purchaseDtos = purchaseDtos;
+    }
 }
